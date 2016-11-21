@@ -2,7 +2,8 @@ public class MobilePhone extends OldPhone {
 	
 	private String[] calledNumbers;
 	
-	public MobilePhone(){
+	public MobilePhone(String brand){
+		super(brand);
 		calledNumbers = new String[10];
 	}
 	
@@ -20,7 +21,7 @@ public class MobilePhone extends OldPhone {
 		rememberNumber(number);
 	}
 	
-	private void rememberNumber (String number){
+	public void rememberNumber (String number){
 		for(int i = 1; i <= 9; i++) {
 			if(calledNumbers[i] != null){
 				calledNumbers[i-1] = calledNumbers[i];
